@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		492DB2F51EDAA693009F6AFD /* ContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DB2F41EDAA693009F6AFD /* ContentsView.swift */; };
+		492DB2F51EDAA693009F6AFD /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DB2F41EDAA693009F6AFD /* ProfileHeaderView.swift */; };
 		4965BCE11EDA946100420611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965BCE01EDA946100420611 /* AppDelegate.swift */; };
 		4965BCE61EDA946100420611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4965BCE41EDA946100420611 /* Main.storyboard */; };
 		4965BCE81EDA946100420611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4965BCE71EDA946100420611 /* Assets.xcassets */; };
@@ -16,10 +16,12 @@
 		4965BCF51EDA94E500420611 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965BCF41EDA94E500420611 /* SecondViewController.swift */; };
 		4965BCF71EDA94F500420611 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965BCF61EDA94F500420611 /* ThirdViewController.swift */; };
 		4965BCF91EDA961F00420611 /* ScrollTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965BCF81EDA961F00420611 /* ScrollTabPageViewController.swift */; };
+		4D78FDAD1EDBA1BB00B85C6F /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D78FDAC1EDBA1BB00B85C6F /* ProfileHeaderView.xib */; };
+		4D88C4FD1EDBB33A0033F15D /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88C4FC1EDBB33A0033F15D /* ScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		492DB2F41EDAA693009F6AFD /* ContentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsView.swift; sourceTree = "<group>"; };
+		492DB2F41EDAA693009F6AFD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		4965BCDD1EDA946100420611 /* PageViewControllerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageViewControllerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4965BCE01EDA946100420611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4965BCE51EDA946100420611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		4965BCF41EDA94E500420611 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4965BCF61EDA94F500420611 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		4965BCF81EDA961F00420611 /* ScrollTabPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollTabPageViewController.swift; sourceTree = "<group>"; };
+		4D78FDAC1EDBA1BB00B85C6F /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
+		4D88C4FC1EDBB33A0033F15D /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,9 @@
 				4965BCF41EDA94E500420611 /* SecondViewController.swift */,
 				4965BCF61EDA94F500420611 /* ThirdViewController.swift */,
 				4965BCF81EDA961F00420611 /* ScrollTabPageViewController.swift */,
-				492DB2F41EDAA693009F6AFD /* ContentsView.swift */,
+				492DB2F41EDAA693009F6AFD /* ProfileHeaderView.swift */,
+				4D78FDAC1EDBA1BB00B85C6F /* ProfileHeaderView.xib */,
+				4D88C4FC1EDBB33A0033F15D /* ScrollViewController.swift */,
 			);
 			path = PageViewControllerTest;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 				4965BCEB1EDA946100420611 /* LaunchScreen.storyboard in Resources */,
 				4965BCE81EDA946100420611 /* Assets.xcassets in Resources */,
 				4965BCE61EDA946100420611 /* Main.storyboard in Resources */,
+				4D78FDAD1EDBA1BB00B85C6F /* ProfileHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,9 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492DB2F51EDAA693009F6AFD /* ContentsView.swift in Sources */,
+				492DB2F51EDAA693009F6AFD /* ProfileHeaderView.swift in Sources */,
 				4965BCF51EDA94E500420611 /* SecondViewController.swift in Sources */,
 				4965BCF91EDA961F00420611 /* ScrollTabPageViewController.swift in Sources */,
+				4D88C4FD1EDBB33A0033F15D /* ScrollViewController.swift in Sources */,
 				4965BCF31EDA94D900420611 /* FirstViewController.swift in Sources */,
 				4965BCF71EDA94F500420611 /* ThirdViewController.swift in Sources */,
 				4965BCE11EDA946100420611 /* AppDelegate.swift in Sources */,

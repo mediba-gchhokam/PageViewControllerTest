@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ContentsView: UIView {
+class ProfileHeaderView: UIView, UIScrollViewDelegate {
     
     @IBOutlet weak var containerView: UIView!
     
-    @IBOutlet weak var scrollView: UIScrollView!
+//    var scrollView: UIScrollView!
     
     @IBOutlet var tabButtons: [UIButton]!
     
@@ -28,32 +28,19 @@ class ContentsView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        scrollView.delegate = self
-        scrollView.scrollsToTop = false
-    }
-}
-
-// MARK: - View
-
-extension ContentsView {
-    
-    fileprivate func randomColor() -> UIColor {
-        let red = Float(arc4random_uniform(255)) / 255.0
-        let green = Float(arc4random_uniform(255)) / 255.0
-        let blue = Float(arc4random_uniform(255)) / 255.0
-        return UIColor(colorLiteralRed: red, green: green, blue: blue, alpha: 1.0)
+//        scrollView = UIScrollView.init(frame: self.frame)
+//        self.addSubview(scrollView)
+//        scrollView.backgroundColor = UIColor.red
+//        scrollView.delegate = self
+//        scrollView.scrollsToTop = false
     }
     
-    func updateCurrentIndex(_ index: Int, animated: Bool) {
-        tabButtons[index].backgroundColor = UIColor(red: 0.88, green: 1.0, blue: 0.87, alpha: 1.0)
-        currentIndex = index
+    @IBAction func tabButtonClicked(_ sender: UIButton) {
+        tabButtonPressedBlock?(sender.tag)
+        updateCurrentIndex(sender.tag, animated: true)
     }
-}
-
-// MARK: - UIScrollViewDelegate
-
-extension ContentsView: UIScrollViewDelegate {
     
+    // MARK: - UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         // 画面の上に消えている場合
@@ -71,15 +58,22 @@ extension ContentsView: UIScrollViewDelegate {
             scrollStart = scrollView.contentOffset.y
         }
     }
+
 }
 
+// MARK: - View
 
-// MARK: - IBAction
-
-extension ContentsView {
+extension ProfileHeaderView {
     
-    @IBAction fileprivate func tabButtonTouchUpInside(_ button: UIButton) {
-        tabButtonPressedBlock?(button.tag)
-        updateCurrentIndex(button.tag, animated: true)
+    fileprivate func randomColor() -> UIColor {
+        let red = Float(arc4random_uniform(255)) / 255.0
+        let green = Float(arc4random_uniform(255)) / 255.0
+        let blue = Float(arc4random_uniform(255)) / 255.0
+        return UIColor(colorLiteralRed: red, green: green, blue: blue, alpha: 1.0)
+    }
+    
+    func updateCurrentIndex(_ index: Int, animated: Bool) {
+        tabButtons[index].backgroundColor = UIColor(red: 0.88, green: 1.0, blue: 0.87, alpha: 1.0)
+        currentIndex = index
     }
 }
